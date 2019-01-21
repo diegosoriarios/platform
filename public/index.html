@@ -45,7 +45,6 @@
 			function keyDownHandler(event) {
 				if(event.keyCode == 39) {
 					//right
-					console.log('right')
 					let obstacles = []
 					obst.forEach(value => {
 						if(value.y === player.y){
@@ -53,7 +52,6 @@
 						}
 					})
 					obstacles.sort(function(a, b){return a - b});
-					console.log(obstacles)
 					if(obstacles[0] > player.x){
 						player.x = obstacles[0] - player.width;
 					}else{
@@ -62,7 +60,6 @@
 				}
 				else if(event.keyCode == 37) {
 					//left
-					console.log('left')
 					let obstacles = []
 					obst.forEach(value => {
 						if(value.y === player.y){
@@ -70,7 +67,6 @@
 						}
 					})
 					obstacles.sort(function(a, b){return a - b});
-					console.log(obstacles)
 					if(obstacles[0] < player.x){
 						player.x = obstacles[0] + obst[0].width;
 					}else{
@@ -78,7 +74,6 @@
 					}
 				}
 				if(event.keyCode == 38) {
-					console.log('up')
 					let obstacles = []
 					obst.forEach(value => {
 						if(value.x === player.x){
@@ -86,7 +81,6 @@
 						}
 					})
 					obstacles.sort(function(a, b){return a - b});
-					console.log(obstacles)
 					if(obstacles[0] < player.y){
 						player.y = obstacles[0] + obst[0].height;
 					}else{
@@ -95,7 +89,6 @@
 				}
 				else if(event.keyCode == 40) {
 					//down
-					console.log('down')
 					let obstacles = []
 					obst.forEach(value => {
 						if(value.x === player.x){
@@ -103,7 +96,6 @@
 						}
 					})
 					obstacles.sort(function(a, b){return a - b});
-					console.log(obstacles)
 					if(obstacles[0] > player.y){
 						player.y = obstacles[0] - player.height;
 					}else{
